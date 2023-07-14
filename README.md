@@ -34,21 +34,23 @@
 <details>
   <summary>HTML</summary>
   <ul>
-    <li><a href="./index.html">Home page</a></li>
+    <li><a href="./src/template.html">Template</a></li>
+    <li><a href="./dist/index.html">Index</a></li>
   </ul>
 </details>
 
 <details>
   <summary>CSS</summary>
   <ul>
-    <li><a href="./style.css">Stylesheet</a></li>
+    <li><a href="./src/style.css">Stylesheet</a></li>
   </ul>
 </details>
 
 <details>
 <summary>JavaScript</summary>
   <ul>
-    <li><a href="./index.js">JavaScript code</a></li>
+    <li><a href="./src/index.js">JavaScript source code</a></li>
+    <li><a href="./dist/bundle.js">JavaScript dist code</a></li>
   </ul>
 </details>
 
@@ -67,7 +69,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link]Coming soon!
+- [Live Demo Link]<a href:"https://george7h.github.io/To-Do-list/dist/">Click here</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

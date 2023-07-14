@@ -1,8 +1,10 @@
 import './style.css';
-
+// eslint-disable-next-line
+import { setupClearButton, setupTaskList } from './modules/checkbox.js';
+// eslint-disable-next-line
 let tasks = [];
 
-// Function to update the indexes of tasks in the list to match position
+// Function to update the indexes of tasks in the list to macth position
 function updateTaskIndexes() {
   tasks.forEach((task, index) => {
     task.index = index + 1;
@@ -64,8 +66,8 @@ function populateList() {
           <span class="description" data-index="${index}" contenteditable>${task.description}</span>
         </div>
         <div class="iconsend">
-          <i class="fa-regular fa-trash-can fa-bounce" style="color: #fe8801;" data-index="${index}"></i>
-          <i class="fa-solid fa-ellipsis-vertical"></i>
+        <i class="fa-regular fa-trash-can fa-bounce" style="color: #fe8801;" data-index="${index}"></i>
+        <i class="fa-solid fa-ellipsis-vertical"></i>
         </div>
       </div>`;
 
@@ -116,12 +118,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const taskList = document.querySelector('#task-list');
-  taskList.addEventListener('change', (event) => {
-    if (event.target.type === 'checkbox') {
-      const index = parseInt(event.target.closest('li').querySelector('.description').getAttribute('data-index'), 10);
-      tasks[index].completed = event.target.checked;
-      saveTasksToLocalStorage();
-    }
-  });
+  setupClearButton();
+  setupTaskList();
 });
+
+export {
+  tasks, updateTaskIndexes, saveTasksToLocalStorage, populateList,
+};
